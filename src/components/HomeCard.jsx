@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function HomeCard(){
     return(
         <>
@@ -7,7 +8,7 @@ function HomeCard(){
                     <div className="text-[52px] font-bold text-[#B88E2F] leading-[65px]">Discover Our New Collection</div>
                     <div className="text-[18px] leading-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div>
                     </div>
-                    <button className=" bg-[#B88E2F] w-[222px] h-[74px] flex gap-[10px] pl-[72px] pr-[72px] pt-[25px] pb-[25px] text-[16px] text-[#FFFFFF] font-bold font-poppins">Buy Me</button>
+                    <Link to="/shop"><button className=" bg-[#B88E2F] w-[222px] h-[74px] flex gap-[10px] pl-[72px] pr-[72px] pt-[25px] pb-[25px] text-[16px] text-[#FFFFFF] font-bold font-poppins hover:cursor-grab">Buy Me</button></Link>
                   </div>
         </>
     )

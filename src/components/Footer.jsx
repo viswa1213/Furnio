@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-    <div className="h-[2px] w-full bg-gray-300"></div>
+    <div className="h-[2px] min-w-screen bg-gray-300"></div>
       <div className="min-w-screen h-[505px] pl-[100px] pr-[100px] pt-[48px] pd-[38px]">
         <div className="w-[1240px] h-[419px] flex flex-col justify-between">
           <div className="w-[1113px] h-[312px] flex flex-row justify-between">

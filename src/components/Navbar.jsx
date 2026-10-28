@@ -5,7 +5,7 @@ import user from '../assets/user.png';
 import cart from '../assets/cart.png';
 import {Link} from "react-router-dom";
 import { use } from 'react';
-function Navbar(){
+function Navbar({onCartClick}){
     return(
         <>
         <div className="h-[100px] w-[1440px] bg-amber-grey flex flex-row items-center justify-around">
@@ -18,14 +18,14 @@ function Navbar(){
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/shop">Shop</Link></li>
                 <li>About</li>
-                <li>Contact</li>
+                <li><Link to="/contact">Contact</Link></li>
             </div>
 
             <div className='flex flex-row items-center gap-[50px]'>
                 <img src={user} alt="" />
                 <img src={search} alt="" />
                 <img src={favorite} alt="" />
-                <img src={cart} alt="" />
+                <img onClick={onCartClick} src={cart} alt="" />
             </div>
         </div>
         </>

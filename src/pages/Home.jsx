@@ -38,7 +38,7 @@ function Home() {
     caurosel3
   }
   return (
-    <>
+    <div className="relative">
       <div className="min-h-screen w-full flex flex-col">
         <Navbar />
         <div
@@ -164,19 +164,19 @@ function Home() {
               that inspire you
             </div>
           </div>
-          <button className="w-[176px] h-[48px] bg-[#B88E2F] text-white">
+          <Link to="/shop"><button className="w-[176px] h-[48px] bg-[#B88E2F] text-white hover:cursor-grab">
             Explore More
-          </button>
+          </button></Link>
         </div>
         <Caurosel/>
       </section>
 
-      <section className="min-h-screen w-full flex flex-col mt-20  items-center">
+      <section className="min-h-screen min-w-screen flex flex-col mt-20  items-center">
         <div className="flex flex-col items-center">
           <div className="text-[20px] font-poppins font-semibold">Share your setup with</div>
           <div className="text-[40px] font-bold font-poppins">#FuniroFurniture</div>
         </div>
-        <div className="relative flex-1 w-full">
+        <div className="relative flex-1 min-w-screen">
 
           <img src={p1copy} alt="" className="absolute left-0" />
 
@@ -186,15 +186,15 @@ function Home() {
             <img src={p5copy} alt="" className="absolute left-150 bottom-50 transition-all duration-300 hover:scale-110 hover:z-10" />
             <img src={p6copy} alt="" className="absolute right-65 bottom-75 transition-all duration-300 hover:scale-110 hover:z-10" />
              <img src={p7copy} alt="" className="absolute right-92 bottom-10 transition-all duration-300 hover:scale-110 hover:z-10" />
-              <img src={p8copy} alt="" className="absolute -right-5 bottom-75 transition-all duration-300 hover:scale-110 hover:z-10" />
+              <img src={p8copy} alt="" className="w-[200px] absolute right-10 bottom-75 transition-all duration-300 hover:scale-110 hover:z-10" />
                <img src={p9copy} alt="" className="absolute right-20 bottom-20 transition-all duration-300 hover:scale-110 hover:z-10" />
         </div>
       </section>
 
-      <section className="mt-20" >
+      <section className="" >
           <Fotter/>
       </section>
-    </>
+    </div>
   );
 }
 

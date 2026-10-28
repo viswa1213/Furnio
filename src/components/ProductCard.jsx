@@ -3,6 +3,7 @@ import ProductBadge from "./ProductBadge";
 import Share from "../assets/gridicons_share.png";
 import compare from "../assets/compare.png";
 import heart from "../assets/Heart.png";
+import { useNavigate } from "react-router-dom";
 function ProductCard({
   pImg,
   pBadgeContent,
@@ -13,12 +14,14 @@ function ProductCard({
   pOrignalAmount,
 }) {
   const [isHover, setisHover] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <div
         className={`w-[285px] h-[456px] flex flex-col relative `}
         onMouseEnter={() => setisHover(true)}
         onMouseLeave={() => setisHover(false)}
+        onClick={() => navigate("/singleProduct")}
       >
         <ProductBadge pContent={pBadgeContent} type={pBadgeType} />
         <img className="w-[285px] h-[301px]" src={pImg} alt="" />
