@@ -7,6 +7,7 @@ import Singleproduct from "./pages/SingleProduct";
 import Contact  from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import Cart from "./pages/Cart";
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}></Route>
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </>
   );
 }
