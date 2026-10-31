@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import CoverImg from "../components/coverImg";
+import CoverImg from "../components/CoverImg";
 import location from "../assets/location.png";
 import phone from "../assets/phone.png";
 import clock from "../assets/clock.png";
