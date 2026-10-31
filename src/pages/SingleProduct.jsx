@@ -6,9 +6,16 @@ import Footer from "../components/Footer";
 import closeCart from "../assets/closeCart.png";
 import CartPopUp from "../components/CartPopUp";
 import { useState } from "react";
-
+import imgMap from "../Data/imageMap";
+import Product from "../Data/product.json";
+import { useParams } from "react-router-dom";
 function Singleproduct() {
 
+  const {id} = useParams();
+  const product = Product.find((product) => String(product.productId) === id)
+  if(!product){
+    return <h1>No Product found in the {id}</h1>
+  }
   const [isCartOpen , setCartOpen] = useState(false);
   return (
     <div className={`relative ${isCartOpen ? "bg-transparent" : ""}`}>
@@ -24,12 +31,12 @@ function Singleproduct() {
         </div>
         <div className="flex flex-row gap-[10px] justify-center items-center">
           <div className="h-[20px] w-[3px] bg-[#9F9F9F]"></div>
-          <div>Asgaard sofa</div>
+          <div>{product.productName}</div>
         </div>
       </div>
 
       <section className="min-h-screen w-full flex flex-col justify-center items-center">
-            <SingleProductComp/>
+            <SingleProductComp productName={product.productName} productImg={product.productImg}/>
       </section>
       <div className="w-full h-[2px] bg-[#9F9F9F]"></div>
 

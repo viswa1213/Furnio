@@ -8,7 +8,7 @@ function ProductCard({
   pImg,
   pBadgeContent,
   pBadgeType,
-  pContent,
+  pName,
   pSubContent,
   pAmount,
   pOrignalAmount,
@@ -28,7 +28,7 @@ function ProductCard({
         <div className=" w-[285px] h-[145px] flex flex-col p-[10px] items-start justify-center bg-[#F4F5F7] gap-[20px]">
           <div className="flex flex-col">
             <div className="text-[24px] font-poppins font-semibold">
-              {pContent}
+              {pName}
             </div>
             <div className="text-[16px] leading-[150%] text-[#898989]">
               {pSubContent}
@@ -47,7 +47,7 @@ function ProductCard({
 
         {isHover &&(
         <div className="w-[285px] h-[446px] flex flex-col justify-center items-center absolute inset-0 bg-black/50 gap-10 ">
-          <button className={`text-[#B88E2F] w-[202px] h-[48px] bg-white text-[16px] font-poppins font-semibold ${isHover ? "opacity-100" : ""}`}>
+          <button className={`text-[#B88E2F] w-[202px] h-[48px] bg-white text-[16px] font-poppins font-semibold hover:cursor-grab ${isHover ? "opacity-100" : ""}`}>
             Add to Cart 
           </button>
           <div className=" flex flex-row gap-10">

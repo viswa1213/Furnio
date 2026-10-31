@@ -15,21 +15,21 @@ function Footer() {
                <div className="w-[352px] h-[321px] grid grid-cols-2">
                  <div className="text-[#9F9F9F]">Links</div>
                  <div className="text-[#9F9F9F]">Help</div>
-                <div className="text-[16px] font-poppins font-medium">Home</div>
-                <div className="text-[16px] font-poppins font-medium">Payment Options</div>
-                <div className="text-[16px] font-poppins font-medium">Shop</div>
-                 <div className="text-[16px] font-poppins font-medium">Returns</div>
-                <div className="text-[16px] font-poppins font-medium">About</div>
-                <div className="text-[16px] font-poppins font-medium">Privacy Policies</div>
-                <div className="text-[16px] font-poppins font-medium">Contact</div>
-                <div className="text-[16px] font-poppins font-medium">Returns</div>
-                <div className="text-[16px] font-poppins font-medium">Privacy Policies</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Home</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Payment Options</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Shop</div>
+                 <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Returns</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">About</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Privacy Policies</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Contact</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Returns</div>
+                <div className="text-[16px] font-poppins font-medium hover:cursor-pointer">Privacy Policies</div>
                </div>
                <div className="w-[286px] h-[101px] flex flex-col justify-between">
                 <div className="text-[#9F9F9F]">Newsletter</div>
                 <div className="flex flex-row">
                     <input className="border-none outline-none underline" type="text" name="" id="" placeholder="Enter Your Email Address"/>
-                    <div className="underline">SUBSCRIBE</div>
+                    <button className="underline cursor-pointer">SUBSCRIBE</button>
                 </div>
                </div>
             </div>

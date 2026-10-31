@@ -1,13 +1,773 @@
 [
     {
-        "productName" : "",
-        "productSubContent" : "",
-        "ProductOrignalAmount" : "",
-        "productAmount" : "",
-        "productBadgeType" : "discount",
-        "productBadgeContent" : "50%"
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
     },
     {
-
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 1,
+        "productImg" : "Syltherine",
+        "productName" : "Syltherine",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "29933",
+        "productAmount" : "$202000",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
+    },
+    {
+        "productId" : 2,
+        "productImg" : "Leviosa",
+        "productName" : "Leviosa",
+        "productSubContent" : "Stylish cafe chair",
+        "ProductOrignalAmount" : "$22223",
+        "productAmount" : "$24344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "10%"
+    },
+    {
+        "productId" : 3,
+        "productImg" : "Lolito",
+        "productName" : "Lolito",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$2330292",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "30%"
+    },
+    {
+        "productId" : 4,
+        "productImg" : "Respira",
+        "productName" : "Respira",
+        "productSubContent" : "Outdoor bar table and stool",
+        "ProductOrignalAmount" : "$223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "21%"
+    },
+    {
+        "productId" : 5,
+        "productImg" : "Muggo",
+        "productName" : "Muggo",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44223",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new%"
+    },
+    {
+        "productId" : 6,
+        "productImg" : "Pingky",
+        "productName" : "Pingky",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$233323",
+        "productAmount" : "$334334",
+        "productBadgeType" : "discount",
+        "productBadgeContent" : "12%"
+    },
+    {
+        "productId" : 7,
+        "productImg" : "Potty",
+        "productName" : "Potty",
+        "productSubContent" : "Luxury big sofa",
+        "ProductOrignalAmount" : "$44424",
+        "productAmount" : "$3344",
+        "productBadgeType" : "new",
+        "productBadgeContent" : "new"
     }
+
 ]

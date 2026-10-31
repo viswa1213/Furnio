@@ -15,10 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/shop" element={<Shop/>}></Route>
+          <Route path="/product/:id" element={<Singleproduct/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
           <Route path="/checkout" element={<Checkout/>}></Route>
-          <Route path="/singleProduct" element={<Singleproduct/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

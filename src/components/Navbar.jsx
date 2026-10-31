@@ -25,7 +25,7 @@ function Navbar({onCartClick}){
                 <img src={user} alt="" />
                 <img src={search} alt="" />
                 <img src={favorite} alt="" />
-                <img onClick={onCartClick} src={cart} alt="" />
+                <button className='hover:cursor-pointer'><img onClick={onCartClick} src={cart} alt="" /></button>
             </div>
         </div>
         </>

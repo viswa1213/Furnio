@@ -9,7 +9,7 @@ function CartPopUp({onClickCloseCart}){
           <div className="flex flex-col gap-10 p-10">
             <div className="flex flex-row justify-between">
             <div>Shopping Cart</div>
-            <button><img className="h-[25px] w-[25x]" src={closeCart} alt=""  onClick={onClickCloseCart}/></button>
+            <button className="hover:cursor-pointer"><img className="h-[25px] w-[25x]" src={closeCart} alt=""  onClick={onClickCloseCart}/></button>
           </div>
 
           <div className="h-[2px] bg-black w-[300px]"></div>

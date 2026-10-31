@@ -8,7 +8,8 @@ import star from "../assets/star.png";
 import twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook.png";
 import linkedin from "../assets/linkedin1.png";
-function SingleProductComp() {
+import imgMap from "../Data/imageMap";
+function SingleProductComp({productName , productImg}) {
   return (
     <>
       <div className="flex flex-row justify-around items-start gap-[100px]">
@@ -20,12 +21,12 @@ function SingleProductComp() {
             <img src={sub4} alt="" />
           </div>
           <div className="w-[423px] h-[500px] bg-[#F9F1E7] rounded-3xl  flex justify-center items-center">
-            <img src={main1} alt="" />
+            <img src={imgMap[productImg]} alt=""  className="w-full h-[500px] object-fill rounded-2xl"/>
           </div>
         </div>
 
         <div className="h-[660px] w-[730px] flex flex-col justify-between">
-          <div className="text-[42px] font-poppins">Asgaard sofa</div>
+          <div className="text-[42px] font-poppins">{productName}</div>
           <div className=" text-[24px] font-poppins text-[#9F9F9F]">
             Rs. 250,000.00
           </div>

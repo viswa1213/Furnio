@@ -1,184 +1,58 @@
 import Navbar from "../components/Navbar"
 import CoverImg from "../components/CoverImg";
-import { Grid2X2, Rows3, SlidersHorizontal } from "lucide-react";
-import fourDots from "../assets/fourDots.png";
-import twoLines from "../assets/twoLines.png";
 import FilterComp from "../components/FilterComp";
 import ProductCard from "../components/ProductCard";
-import Grifo from "../assets/Grifo.png";
-import Syltherine from "../assets/Syltherine.png";
-import Leviosa from "../assets/Leviosa.png";
-import Lolito from "../assets/Lolito.png";
-import Respira from "../assets/Respira.png";
-import Muggo from "../assets/Muggo.png";
-import Pingky from "../assets/Pingky.png";
-import Potty from "../assets/Potty.png";
-import trophy from "../assets/trophy.png";
-import guarantee from "../assets/guarantee.png";
-import shipping from "../assets/shipping.png";
-import customersupport from "../assets/customer-support.png";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
+import Product from "../Data/product.json";
+import { useState } from "react";
+import imgMap from "../Data/imageMap";
+import { Link } from "react-router-dom";
 function Shop(){
+  const [currentPage , setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(16);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+
+  const totalPages = Math.ceil(Product.length / itemsPerPage)
+  const visibleProduct = Product.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  )
+  const startPage = Math.min(
+    Math.max(1,currentPage - 1),
+    Math.max(1, totalPages - 2)
+  )
+  const visibleButton = Array.from(
+    {length : Math.min(3,totalPages)},
+    (_,index) => startPage + index
+  )
     return(
         <>
         <Navbar/>
         <CoverImg/>
-        <FilterComp/>
+        <FilterComp itemsPerPage = {itemsPerPage} setItemsPerPage = {setItemsPerPage} startIndex = {startIndex} endIndex = {startIndex+itemsPerPage} totalProduct={Product.length}/>
         <div className="grid grid-cols-4 place-items-center p-10 gap-[10px]">
-             <ProductCard
-            pBadgeContent={"30%"}
-            pBadgeType={"discount"}
-            pImg={Syltherine}
-            pAmount={"Rp 2.500.000"}
-            pContent={"Syltherine"}
-            pOrignalAmount={"Rp 3.500.000"}
-            pSubContent={"Stylish cafe chair"}
+            {visibleProduct.map((product) => (
+               <Link to={`/product/${product.productId}`}>
+               <ProductCard
+            pBadgeContent={product.productBadgeContent}
+            pBadgeType={product.productBadgeType}
+            pImg={imgMap[product.productImg]}
+            pAmount={product.productAmount}
+            pName={product.productName}
+            pOrignalAmount={product.ProductOrignalAmount}
+            pSubContent={product.productSubContent}
           />
-          <ProductCard
-            pBadgeContent={""}
-            pBadgeType={""}
-            pImg={Leviosa}
-            pAmount={"Rp 2.500.000"}
-            pContent={"Leviosa"}
-            pOrignalAmount={""}
-            pSubContent={"Stylish cafe chair"}
-          />
-          <ProductCard
-            pBadgeContent={"50%"}
-            pBadgeType={"discount"}
-            pImg={Lolito}
-            pAmount={"Rp 7.000.000"}
-            pContent={"Lolito"}
-            pOrignalAmount={"Rp 14.000.000"}
-            pSubContent={"Luxury big sofa"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Respira}
-            pAmount={"Rp 500.000"}
-            pContent={"Respira"}
-            pOrignalAmount={""}
-            pSubContent={"Outdoor bar table and stool"}
-          />
-
-          <ProductCard
-            pBadgeContent={""}
-            pBadgeType={""}
-            pImg={Grifo}
-            pAmount={"Rp 1.500.000"}
-            pContent={"Griffo"}
-            pOrignalAmount={""}
-            pSubContent={"Night lamp"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Muggo}
-            pAmount={"Rp 150.000"}
-            pContent={"Muggo"}
-            pOrignalAmount={""}
-            pSubContent={"Small mug"}
-          />
-          <ProductCard
-            pBadgeContent={"50%"}
-            pBadgeType={"discount"}
-            pImg={Pingky}
-            pAmount={"Rp 7.000.000"}
-            pContent={"Pingky"}
-            pOrignalAmount={"Rp 14.000.000"}
-            pSubContent={"Cute bed set"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Potty}
-            pAmount={"Rp 500.000"}
-            pContent={"Potty"}
-            pOrignalAmount={""}
-            pSubContent={"Minimalist flower pot"}
-          />
-        <ProductCard
-            pBadgeContent={"30%"}
-            pBadgeType={"discount"}
-            pImg={Syltherine}
-            pAmount={"Rp 2.500.000"}
-            pContent={"Syltherine"}
-            pOrignalAmount={"Rp 3.500.000"}
-            pSubContent={"Stylish cafe chair"}
-          />
-          <ProductCard
-            pBadgeContent={""}
-            pBadgeType={""}
-            pImg={Leviosa}
-            pAmount={"Rp 2.500.000"}
-            pContent={"Leviosa"}
-            pOrignalAmount={""}
-            pSubContent={"Stylish cafe chair"}
-          />
-          <ProductCard
-            pBadgeContent={"50%"}
-            pBadgeType={"discount"}
-            pImg={Lolito}
-            pAmount={"Rp 7.000.000"}
-            pContent={"Lolito"}
-            pOrignalAmount={"Rp 14.000.000"}
-            pSubContent={"Luxury big sofa"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Respira}
-            pAmount={"Rp 500.000"}
-            pContent={"Respira"}
-            pOrignalAmount={""}
-            pSubContent={"Outdoor bar table and stool"}
-          />
-
-          <ProductCard
-            pBadgeContent={""}
-            pBadgeType={""}
-            pImg={Grifo}
-            pAmount={"Rp 1.500.000"}
-            pContent={"Griffo"}
-            pOrignalAmount={""}
-            pSubContent={"Night lamp"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Muggo}
-            pAmount={"Rp 150.000"}
-            pContent={"Muggo"}
-            pOrignalAmount={""}
-            pSubContent={"Small mug"}
-          />
-          <ProductCard
-            pBadgeContent={"50%"}
-            pBadgeType={"discount"}
-            pImg={Pingky}
-            pAmount={"Rp 7.000.000"}
-            pContent={"Pingky"}
-            pOrignalAmount={"Rp 14.000.000"}
-            pSubContent={"Cute bed set"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Potty}
-            pAmount={"Rp 500.000"}
-            pContent={"Potty"}
-            pOrignalAmount={""}
-            pSubContent={"Minimalist flower pot"}
-          />
+               </Link>
+            ))}
         </div>
        <div className="flex flex-row justify-center items-center gap-[10px]">
-         <div className="h-[60px] w-[60px] bg-[#B88E2F] rounded-2xl text-white flex justify-center items-center">1</div>
-        <div className="h-[60px] w-[60px] bg-[#F9F1E7] rounded-2xl text-black flex justify-center items-center">2</div>
-        <div className="h-[60px] w-[60px] bg-[#F9F1E7] rounded-2xl text-black flex justify-center items-center">3</div>
-        <div className="h-[60px] w-[100px] bg-[#F9F1E7] rounded-2xl text-black flex justify-center items-center">Next</div>
-       </div>
+        <button disabled={currentPage == 1} className={`h-[60px] w-[100px] bg-[#F9F1E7] rounded-2xl text-blac hover:cursor-grab ${currentPage == 1 ? "opacity-0 hover:cursor-alias" : ""}`} onClick={() =>setCurrentPage(currentPage - 1)}>Previous</button>
+        {visibleButton.map((page) => (
+          <button onClick={() => setCurrentPage(page)} key={page} className={`h-[60px] w-[60px] rounded-2xl hover:cursor-grab ${currentPage === page ? "bg-[#B88E2F] text-white" : "border-2 border-[#B88E2F] text-black"}`}>{page}</button>
+        ))}
+        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage((page) => page+1)} className={`h-[60px] w-[100px] bg-[#F9F1E7] rounded-2xl text-black flex justify-center items-center hover:cursor-grab ${currentPage === totalPages ? "opacity-0 ": ""}`}>Next</button>
+       </div> 
 
 
       <Banner/>
