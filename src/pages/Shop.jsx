@@ -8,6 +8,7 @@ import Product from "../Data/product.json";
 import { useState } from "react";
 import imgMap from "../Data/imageMap";
 import { Link } from "react-router-dom";
+
 function Shop(){
   const [currentPage , setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(16);
