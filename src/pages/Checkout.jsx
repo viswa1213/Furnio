@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import CoverImg from "../components/coverImg";
+import CoverImg from "../components/CoverImg";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar"
 function Checkout(){
