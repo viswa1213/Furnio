@@ -6,14 +6,6 @@ import p2 from "../assets/p2.png";
 import p3 from "../assets/p3.png";
 import ProductShowCaseCard from "../components/ProductShowCaseCard";
 import ProductCard from "../components/ProductCard";
-import Grifo from "../assets/Grifo.png";
-import Syltherine from "../assets/Syltherine.png";
-import Leviosa from "../assets/Leviosa.png";
-import Lolito from "../assets/Lolito.png";
-import Respira from "../assets/Respira.png";
-import Muggo from "../assets/Muggo.png";
-import Pingky from "../assets/Pingky.png";
-import Potty from "../assets/Potty.png";
 import caurosel1 from "../assets/caurosel1.png";
 import caurosel3 from "../assets/caurosel3.png";
 import caurosel2 from "../assets/caurosel2.png";
@@ -29,18 +21,26 @@ import p7copy from "../assets/p7.png";
 import p8copy from "../assets/p8.png";
 import p9copy from "../assets/p9.png";
 import Fotter from "../components/Footer";
-import {Link} from "react-router-dom";
-function Home() {
+import {Link, useNavigate} from "react-router-dom";
+import product from "../Data/product.json";
+import { useState } from "react";
+import imgMap from "../Data/imageMap";
+import successIcon from "../assets/successIcon.png";
+import closeIcon from "../assets/closeIcon.png";
+function Home({cart,setCart}) {
 
   const Images = {
     caurosel1,
     caurosel2,
     caurosel3
   }
+
+  const navigate = useNavigate();
+  const [isCartClicked ,setIsCartClicked] = useState(false);
   return (
     <div className="relative">
       <div className="min-h-screen w-full flex flex-col">
-        <Navbar />
+        <Navbar onCartClick={() => navigate("/cart")}/>
         <div
           className=" flex-1 h-[500px] w-full bg-amber-200 bg-cover bg-center flex items-end justify-end p-30 pt-20"
           style={{ backgroundImage: `url(${homebg})` }}
@@ -73,79 +73,24 @@ function Home() {
           Our Products
         </div>
         <div className="grid grid-cols-4 gap-10">
-          <ProductCard
-            pBadgeContent={"30%"}
-            pBadgeType={"discount"}
-            pImg={Syltherine}
-            pAmount={"Rp 2.500.000"}
-            pContent={"Syltherine"}
-            pOrignalAmount={"Rp 3.500.000"}
-            pSubContent={"Stylish cafe chair"}
-          />
-          <ProductCard
-            pBadgeContent={""}
-            pBadgeType={""}
-            pImg={Leviosa}
-            pAmount={"Rp 2.500.000"}
-            pContent={"Leviosa"}
-            pOrignalAmount={""}
-            pSubContent={"Stylish cafe chair"}
-          />
-          <ProductCard
-            pBadgeContent={"50%"}
-            pBadgeType={"discount"}
-            pImg={Lolito}
-            pAmount={"Rp 7.000.000"}
-            pContent={"Lolito"}
-            pOrignalAmount={"Rp 14.000.000"}
-            pSubContent={"Luxury big sofa"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Respira}
-            pAmount={"Rp 500.000"}
-            pContent={"Respira"}
-            pOrignalAmount={""}
-            pSubContent={"Outdoor bar table and stool"}
-          />
-
-          <ProductCard
-            pBadgeContent={""}
-            pBadgeType={""}
-            pImg={Grifo}
-            pAmount={"Rp 1.500.000"}
-            pContent={"Griffo"}
-            pOrignalAmount={""}
-            pSubContent={"Night lamp"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Muggo}
-            pAmount={"Rp 150.000"}
-            pContent={"Muggo"}
-            pOrignalAmount={""}
-            pSubContent={"Small mug"}
-          />
-          <ProductCard
-            pBadgeContent={"50%"}
-            pBadgeType={"discount"}
-            pImg={Pingky}
-            pAmount={"Rp 7.000.000"}
-            pContent={"Pingky"}
-            pOrignalAmount={"Rp 14.000.000"}
-            pSubContent={"Cute bed set"}
-          />
-          <ProductCard
-            pBadgeContent={"New"}
-            pBadgeType={"new"}
-            pImg={Potty}
-            pAmount={"Rp 500.000"}
-            pContent={"Potty"}
-            pOrignalAmount={""}
-            pSubContent={"Minimalist flower pot"}
-          />
+          {product.slice(0,8).map((product) => {
+            return(
+                <ProductCard
+            pBadgeContent={product.productBadgeContent}
+            pBadgeType={product.productBadgeType}
+            pImg={imgMap[product.productImg]}
+            pAmount={product.productAmount}
+            pName={product.productName}
+            pOrignalAmount={product.ProductOrignalAmount}
+            pSubContent={product.productSubContent}
+            productId = {product.productId}
+            isCartClicked = {isCartClicked}
+            setIsCartClicked = {setIsCartClicked}
+            cart = {cart}
+            setCart = {setCart}
+            />
+            );
+          })}
         </div>
 
         <button className="w-[245px] h-[48px] bg-white text-[#B88E2F] border-[#B88E2F] border-2 hover:cursor-grab">
@@ -194,6 +139,17 @@ function Home() {
       <section className="" >
           <Fotter/>
       </section>
+
+
+                 {isCartClicked && (
+                  <div className= "fixed inset-0 flex items-center justify-center z-50">
+                    <div className="h-[130px] w-[500px] bg-white rounded-xl flex justify-center items-center relative">
+                      <div className="font-poppins font-bold text-[20px]">Items Added Successfully</div>
+                      <img className="h-[50px] w-[50px]" src={successIcon} alt="" />
+                      <button onClick={() => setIsCartClicked(false)}><img className="absolute h-[40px] w-[40px] right-0 top-0" src={closeIcon} alt="" /></button>
+                    </div>
+                  </div>
+                 )}
     </div>
   );
 }

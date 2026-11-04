@@ -4,6 +4,8 @@ import Share from "../assets/gridicons_share.png";
 import compare from "../assets/compare.png";
 import heart from "../assets/Heart.png";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import product from "../Data/product.json";
 function ProductCard({
   pImg,
   pBadgeContent,
@@ -12,16 +14,39 @@ function ProductCard({
   pSubContent,
   pAmount,
   pOrignalAmount,
+  productId,
+  isCartClicked,
+  setIsCartClicked,
+  cart,
+  setCart
 }) {
   const [isHover, setisHover] = useState(false);
   const navigate = useNavigate();
+
+ function isCartClicked(){
+   setIsCartClicked(true)
+   
+   const productInCart = cart.find((product) => Number(product.productId) == Number(productId))
+   if(productInCart){
+      setCart((prevcart) => prevcart.map((item) => Number(item.productId) === Number(productId) ? {...item,productQuantity:Number(item.productQuantity)+1} : item))
+   }
+   else{
+    const cartItem = {
+      "productImg" : pImg,
+      "productId" :productId,
+      "productName" : pName,
+      "productAmount" : pOrignalAmount,
+      "productQuantity" : 1,
+    }
+      setCart((prevcart) => [...prevcart,cartItem])
+   }
+ }
   return (
     <>
       <div
         className={`w-[285px] h-[456px] flex flex-col relative `}
         onMouseEnter={() => setisHover(true)}
         onMouseLeave={() => setisHover(false)}
-        onClick={() => navigate("/singleProduct")}
       >
         <ProductBadge pContent={pBadgeContent} type={pBadgeType} />
         <img className="w-[285px] h-[301px]" src={pImg} alt="" />
@@ -47,7 +72,7 @@ function ProductCard({
 
         {isHover &&(
         <div className="w-[285px] h-[446px] flex flex-col justify-center items-center absolute inset-0 bg-black/50 gap-10 ">
-          <button className={`text-[#B88E2F] w-[202px] h-[48px] bg-white text-[16px] font-poppins font-semibold hover:cursor-grab ${isHover ? "opacity-100" : ""}`}>
+          <button onClick={isCartClicked} className={`text-[#B88E2F] w-[202px] h-[48px] bg-white text-[16px] font-poppins font-semibold hover:cursor-grab ${isHover ? "opacity-100" : ""}`}>
             Add to Cart 
           </button>
           <div className=" flex flex-row gap-10">
@@ -59,11 +84,12 @@ function ProductCard({
               <img src={compare} alt="" />
               <div className="text-[16px] text-white">Compare</div>
             </div>
-            <div className="flex flex-row justify-center items-center gap-[5px]">
+            <button><div className="flex flex-row justify-center items-center gap-[5px]">
               <img src={heart} alt="" />
               <div className="text-[16px] text-white">Like</div>
-            </div>
+            </div></button>
           </div>
+          <Link to = {`/product/${productId}`}><button className="bg-white w-[80px] h-[50px] text-[20px] text-[#B88E2F] rounded-xl hover:cursor-pointer font-poppins">View</button></Link>
         </div>
       )}
       </div>

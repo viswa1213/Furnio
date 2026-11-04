@@ -13,10 +13,10 @@ function Singleproduct() {
 
   const {id} = useParams();
   const product = Product.find((product) => String(product.productId) === id)
+  const [isCartOpen , setCartOpen] = useState(false);
   if(!product){
     return <h1>No Product found in the {id}</h1>
   }
-  const [isCartOpen , setCartOpen] = useState(false);
   return (
     <div className={`relative ${isCartOpen ? "bg-transparent" : ""}`}>
       <Navbar onCartClick={() => setCartOpen(true)}/>
@@ -60,7 +60,7 @@ function Singleproduct() {
       { isCartOpen &&
       <div
     className="fixed inset-0  bg-black/50"
-    onClick={() => setIsCartOpen(false)}
+    onClick={() => setCartOpen(false)}
   >
       <CartPopUp onClickCloseCart={() => setCartOpen(false)}/>
         </div>}

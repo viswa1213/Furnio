@@ -7,9 +7,10 @@ import Banner from "../components/Banner";
 import Product from "../Data/product.json";
 import { useState } from "react";
 import imgMap from "../Data/imageMap";
-import { Link } from "react-router-dom";
-
-function Shop(){
+import { Link, useNavigate } from "react-router-dom";
+import successIcon from "../assets/successIcon.png";
+import closeIcon from "../assets/closeIcon.png";
+function Shop({cart,setCart}){
   const [currentPage , setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(16);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -27,14 +28,15 @@ function Shop(){
     {length : Math.min(3,totalPages)},
     (_,index) => startPage + index
   )
+  const navigate = useNavigate();
+  const [isCartClicked ,setIsCartClicked] = useState(false);
     return(
         <>
-        <Navbar/>
+       <Navbar onCartClick={() => navigate("/cart")}/>
         <CoverImg/>
-        <FilterComp itemsPerPage = {itemsPerPage} setItemsPerPage = {setItemsPerPage} startIndex = {startIndex} endIndex = {startIndex+itemsPerPage} totalProduct={Product.length}/>
+        <FilterComp itemsPerPage = {itemsPerPage} setItemsPerPage = {setItemsPerPage} startIndex = {startIndex+1} endIndex = {startIndex+itemsPerPage} totalProduct={Product.length}/>
         <div className="grid grid-cols-4 place-items-center p-10 gap-[10px]">
             {visibleProduct.map((product) => (
-               <Link to={`/product/${product.productId}`}>
                <ProductCard
             pBadgeContent={product.productBadgeContent}
             pBadgeType={product.productBadgeType}
@@ -43,8 +45,12 @@ function Shop(){
             pName={product.productName}
             pOrignalAmount={product.ProductOrignalAmount}
             pSubContent={product.productSubContent}
+            productId = {product.productId}
+            isCartClicked = {isCartClicked}
+            setIsCartClicked = {setIsCartClicked}
+            cart = {cart}
+            setCart = {setCart}
           />
-               </Link>
             ))}
         </div>
        <div className="flex flex-row justify-center items-center gap-[10px]">
@@ -61,6 +67,16 @@ function Shop(){
         <section>
               <Footer/>
            </section>
+
+           {isCartClicked && (
+            <div className= "fixed inset-0 flex items-center justify-center z-50">
+              <div className="h-[130px] w-[500px] bg-white rounded-xl flex justify-center items-center relative">
+                <div className="font-poppins font-bold text-[20px]">Items Added Successfully</div>
+                <img className="h-[50px] w-[50px]" src={successIcon} alt="" />
+                <button onClick={() => setIsCartClicked(false)}><img className="absolute h-[40px] w-[40px] right-0 top-0" src={closeIcon} alt="" /></button>
+              </div>
+            </div>
+           )}
         </>
     )
 }
